@@ -1,0 +1,50 @@
+1 ?- consult('lab10_tasks.pl').
+true.
+
+TASK 1 - AREA AND PERIMETER
+
+2 ?- square(4, Area, Perimeter).
+Area = 16,
+Perimeter = 16.
+
+3 ?- rectangle(5, 3, Area, Perimeter).
+Area = 15,
+Perimeter = 16.
+
+4 ?- triangle(3, 4, 4, 5, Area, Perimeter).
+Area = 6.0,
+Perimeter = 12.
+
+TASK 2 - SUCCESSFUL LOGIN
+
+5 ?- login.
+Username: user1.
+Password: |: pass123.
+Login Successful
+true.
+
+TASK 2 - RETRY THEN SUCCESS
+
+6 ?- login.
+Username: user1.
+Password: |: wrong.
+Login Unsuccessful
+Username: |: user1.
+Password: |: pass123.
+Login Successful
+true.
+
+TASK 2 - THREE UNSUCCESSFUL ATTEMPTS
+
+7 ?- login.
+Username: user1.
+Password: |: wrong.
+Login Unsuccessful
+Username: |: user1.
+Password: |: wrong.
+Login Unsuccessful
+Username: |: user1.
+Password: |: wrong.
+Login Unsuccessful
+Sorry, you exceeded the maximum number of attempts, try again later.
+true.
